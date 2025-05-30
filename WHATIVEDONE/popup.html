@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extension Popup</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      width: 220px;
+      padding: 10px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+    #cookieList {
+      font-size: 12px;
+      white-space: pre-wrap;
+      max-height: 150px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 5px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h3>My Extension</h3>
+  <button id="button1">Send GET Request</button>
+  <button id="showPosts">Show Recent POSTs</button>
+  <div id="postList"></div>
+  <button id="showCookies">Show Cookies</button>
+  <div id="cookieList"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
