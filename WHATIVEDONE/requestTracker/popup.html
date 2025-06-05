@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Network Requests</title>
+  <style>
+    body { font-family: sans-serif; width: 300px; padding: 10px; }
+    button { margin-bottom: 10px; width: 100%; }
+    #requestList {
+      font-size: 12px;
+      white-space: pre-wrap;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+    <label>
+      <input type="checkbox" id="useExtensionFilter" checked />
+      Use Extension Filter
+  </label>
+  <br />
+  <label>
+      <input type="checkbox" id="useMethodFilter" />
+      Use HTTP Method Filter
+  </label>
+  <br />
+  
+  <select id="extensionFilter">
+    <option value="all">All Types</option>
+    <option value="js">js</option>
+    <option value="css">css</option>
+    <option value="json">json</option>
+    <option value="png">png</option>
+    <option value="html">html</option>
+    <option value="jpg">jpg</option>
+    <option value="svg">svg</option>
+    <option value="woff">woff</option>
+  </select>
+  <select id="methodFilter">
+    <option value="all">All Methods</option>
+    <option value="GET">GET</option>
+    <option value="POST">POST</option>
+    <option value="PUT">PUT</option>
+    <option value="DELETE">DELETE</option>
+    <option value="OPTIONS">OPTIONS</option>
+  </select>  
+  <button id="showRequests">Show Network Requests</button>
+  <button id="clearRequests">Clear Requests</button>
+  <div id="requestList"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
