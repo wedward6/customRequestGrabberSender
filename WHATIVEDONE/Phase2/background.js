@@ -6,7 +6,8 @@ chrome.runtime.onInstalled.addListener(() => {
 // Helper: decide if details describes a document load
 function isDocumentRequest(details) {
   // Only consider main_frame and sub_frame requests (exclude scripts, images, etc.)
-  if (details.type !== "main_frame" && details.type !== "sub_frame") {
+  //if (details.type !== "main_frame" && details.type !== "sub_frame") {
+  if (details.type !== "main_frame") {
     return false;
   }
 
@@ -48,3 +49,4 @@ chrome.webRequest.onCompleted.addListener(
   { urls: ["<all_urls>"] },
   ["responseHeaders"]
 );
+
